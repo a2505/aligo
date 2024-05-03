@@ -282,7 +282,7 @@ class Auth:
         data = response.json()['content']['data']
 
         qr_link = data['codeContent']
-
+        self.log.info(f'QR_Link: {qr_link}')
         # 开启服务
         if self._port or self._email:
             if self._port:
